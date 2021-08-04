@@ -1,15 +1,16 @@
 package br.com.tech4me.pessoaws.service;
 
 import java.util.List;
+import java.util.Optional;
 
-import br.com.tech4me.pessoaws.model.Pessoa;
+import br.com.tech4me.pessoaws.shared.PessoaDto;
 
 public interface PessoaService {
 
-    List<Pessoa> obterTodos();
-    Pessoa obterPessoaPorId(String id);
-    Pessoa cadastrarPessoa(Pessoa pessoa);
+    List<PessoaDto> obterTodos();
+    Optional<PessoaDto> obterPessoaPorId(String id);
+    PessoaDto cadastrarPessoa(PessoaDto pessoa);
     void excluirPessoaPorId(String id);
-    Pessoa atualizarPessoaPorId(String id, Pessoa pessoa);
+    Optional<PessoaDto> atualizarPessoaPorId(String id, PessoaDto pessoa);
     
 }
