@@ -10,6 +10,15 @@ public class Pessoa {
     private String nome;
     private String sobrenome;
     private int idade;
+    private String observacoes;
+
+   
+    public String getObservacoes() {
+        return observacoes;
+    }
+    public void setObservacoes(String observacoes) {
+        this.observacoes = observacoes;
+    }
 
     public String getId() {
         return id;
