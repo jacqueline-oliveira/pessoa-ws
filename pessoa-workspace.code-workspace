@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "pessoa-ws"
+		},
+		{
+			"name": "eureka-server",
+			"path": "eureka-server"
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "automatic"
+	}
+}
