@@ -6,6 +6,10 @@
 		{
 			"name": "eureka-server",
 			"path": "eureka-server"
+		},
+		{
+			"name": "zuul-server",
+			"path": "zuul-server\\zuul-server"
 		}
 	],
 	"settings": {
