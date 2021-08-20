@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -33,6 +34,12 @@ public class PessoaController {
     public ResponseEntity<List<PessoaDto>> obterPessoas() {
       return new ResponseEntity<>(servico.obterTodos(), HttpStatus.ACCEPTED); 
     } 
+
+    @GetMapping(value = "/porta")
+    public String verificarPorta(@Value("${local.server.port}") String porta) {
+        return String.format("Microsserviço respondeu a partir da porta %s", porta);
+    }
+
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<PessoaDto> obterPessoaPorId(@PathVariable String id) {
